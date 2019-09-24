@@ -21,9 +21,9 @@ async function getWeatherData(zip_code_from_form) {
         myJson = response;
         console.log(JSON.stringify(myJson));
         updateCity(myJson['name']);
-        zipZip.innerHTML = myJson["name"];
-        updateTemp(myJson['temp']);
-        temp.innerHTML = myJson["main.temp"];
+        //zipZip.innerHTML = myJson["name"];
+        updateTemp(myJson['main'].temp);
+        updateCondition(myJson["weather"][0].description);
     });
 
     
@@ -45,10 +45,16 @@ function updateCity(str) {
 console.log(updateCity)
 
 function updateTemp(str) {
-    // update city html element with str
-    var temp = document.getElementById('main.temp');
+    // update temp html element with str
+    var temp = document.getElementById('temp');
     temp.textContent = str;
 
+}
+
+function updateCondition(str) {
+    // update Condition html with str
+    var condition = document.getElementById('condition');
+    condition.textContent = str;
 }
 
 
