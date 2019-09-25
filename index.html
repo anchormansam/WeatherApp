@@ -10,53 +10,128 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <p>
-        Zip Code: <input id="zipCode" value="40509"></input><br>
-        <button id="submit">Submit</button>
-    </p>
+    <div class="container">
+        <!-- Web App header -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="text-align: center">
+                <h2>Weather App</h2>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Zip Code -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-4" style="justify-content: Center; text-align: center ">
+                <p>
+                    <strong>Zip Code: </strong><input id="zipCode" type="tel" value=" "></input>
+                    <p>
+                        <button type="submit" button id="submit" class=" mt-3 btn btn-dark">Submit</button>
+                    </p>
+                </p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Submit Button -->
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-2 mt-1">
+                <!-- <p>
+                    <button type="submit" button id="submit" class=" mt-3 btn btn-dark">Submit</button>
+                </p> -->
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <!-- City Name -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Name of City</h3>
+                    </div>
+                    <div class="card-body">
 
-    <p id='name'></p>
+                        <p id='name'></p>
 
-    <p id='zipCode'></p>
+                    </div>
 
-    <p id='temp'></p>
+                </div>
 
-    <p id='condition'></p>
+                <p id='name'></p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Temperature (make sure to add 3 temp spots)-->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-3">
+                <div class="card text-center">
+                    <div class="card-header">
+
+                        <h3>Current Temperature</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            Kelvin <p id='temp'></p><br>
+                            Celsius<p id='Celsius'></p><br>
+                            Fahrenheit <p id='Fahrenheit'></p><br>
+                        </p>
+
+                    </div>
+
+                </div>
 
 
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Condition Header -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 mt-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Weather Condition</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Special title treatment</h5> -->
+                        <h4>
+                            <p class="card-text">
+                                <p id='condition'></p>
+                            </p>
+                        </h4>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Current Conditions</p>
+                        <img src="" id='season' />
+                    </div>
+                </div>
 
 
+            </div>
+            <div class="col-2"></div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
